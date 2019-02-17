@@ -1,12 +1,12 @@
-#Running the app locally
+# Running the app locally
 
 npm run start
 
-#Executing tests
+# Executing tests
 
 npm run test
 
-#Debugging tests
+# Debugging tests
 
 A launch config for the test cases(Mocha tests) has been added. 
 In the visual studio code debug pane, make sure the above launch config is selected and then hit the green play button.
