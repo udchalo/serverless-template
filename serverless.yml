@@ -1,4 +1,4 @@
-service: UdChalo
+service: ${opt:product}
 provider:
   name: aws
   runtime: nodejs8.10
@@ -24,8 +24,8 @@ provider:
         - dynamodb:BatchGetItem 
       Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.storageTableName}*"
 functions:
-  udChaloApi: 
-    name: udChalo-${opt:stage}-api
+  Api: 
+    name: ${opt:product}-${opt:stage}-api
     handler: build/src/lambda.handler
     package:
       include:
