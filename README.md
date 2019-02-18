@@ -13,4 +13,4 @@ In the visual studio code debug pane, make sure the above launch config is selec
 
 # Deploy API
 
-serverless deploy --stage dev --region us-east-1 --awsAccId 189709129989
+serverless deploy --stage dev --region ap-south-1 --awsAccId 618705841268

@@ -24,13 +24,15 @@ provider:
         - dynamodb:BatchGetItem 
       Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.storageTableName}*"
 functions:
-  tenantApi: 
+  udChaloApi: 
     name: udChalo-${opt:stage}-api
-    handler: build/lambda.handler
+    handler: build/src/lambda.handler
     package:
       include:
         - build/src/**
         - node_modules/**
+    environment:
+      sampleKey: 'sampleValue'
     events:
       - http:
           path: /{proxy+}
