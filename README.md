@@ -40,3 +40,8 @@ Environment Image: `aws/codebuild/nodejs:8.11.0-1.3.0`
 5. CloudWatchLogsFullAccess
 6. AmazonAPIGatewayAdministrator
 7. AmazonRoute53FullAccess
+
+# Stuff to edit after copying
+
+1. Open `serverless.yml`, change top line to mention the actual service name, usually, simply change from ${opt:product} to `name of your repo` .. dont change product name anywhere else
+2. Open `buildspec.yml`, add commands for test cases, change `product` in the `serverless command` to something more sensible to a higher level product's name for disambuguation of deployed articles
