@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+    install:
+         commands:
+            - npm install -g serverless@1.37.1
+    build:
+         commands:
+            - npm install
+    post_build:
+         commands:
+            - env="dev"
+            - echo $CODEBUILD_WEBHOOK_HEAD_REF
+            - if [ "$CODEBUILD_WEBHOOK_HEAD_REF" = "refs/heads/master" ]; then env="prod"; elif [ "$CODEBUILD_WEBHOOK_HEAD_REF" = "refs/heads/development" ]; then env="dev"; fi
+            - echo "deploying for env=$env"
+            - serverless deploy --stage $env --product sample --region us-east-1 --verbose
