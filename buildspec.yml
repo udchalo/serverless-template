@@ -13,4 +13,4 @@ phases:
             - echo $CODEBUILD_WEBHOOK_HEAD_REF
             - if [ "$CODEBUILD_WEBHOOK_HEAD_REF" = "refs/heads/master" ]; then env="prod"; elif [ "$CODEBUILD_WEBHOOK_HEAD_REF" = "refs/heads/development" ]; then env="dev"; fi
             - echo "deploying for env=$env"
-            - serverless deploy --stage $env --region us-east-1 --verbose
+            - serverless deploy --stage $env --product sample --region us-east-1 --verbose
