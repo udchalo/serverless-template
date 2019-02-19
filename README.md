@@ -18,8 +18,11 @@ serverless deploy --stage dev --region ap-south-1
 # Codebuild
 
 Webhook Event Type: `PUSH`
+
 Start a build under these conditions: `HEAD_REF` = `refs/heads/master`
+
 Environment Image: `aws/codebuild/nodejs:8.11.0-1.3.0`
+
 `Enable Cloudwatch logs`
 
 ## Code Build Role Permissions
