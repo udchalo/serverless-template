@@ -40,6 +40,7 @@ Environment Image: `aws/codebuild/nodejs:8.11.0-1.3.0`
 5. CloudWatchLogsFullAccess
 6. AmazonAPIGatewayAdministrator
 7. AmazonRoute53FullAccess
+8. Custom policy for CloudformationReadWriteAccess
 
 # Stuff to edit after copying
 
