@@ -41,6 +41,23 @@ Environment Image: `aws/codebuild/nodejs:8.11.0-1.3.0`
 6. AmazonAPIGatewayAdministrator
 7. AmazonRoute53FullAccess
 8. Custom policy for CloudformationReadWriteAccess
+9. Custom policy for managing IAM roles for AWS Lambda
+
+For `pt#9` above, following items are needed in the custom policy:
+```
+"Effect": "Allow",
+      "Action": [
+        "iam:GetRole",
+        "iam:PassRole",
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:DetachRolePolicy",
+        "iam:PutRolePolicy",
+        "iam:AttachRolePolicy",
+        "iam:DeleteRolePolicy"
+      ]
+      ...
+```
 
 # Stuff to edit after copying
 
