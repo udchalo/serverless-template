@@ -1,10 +1,14 @@
 # Running the app locally
 
+```
 npm run start
+```
 
 # Executing tests
 
+```
 npm run test
+```
 
 # Debugging tests
 
@@ -13,7 +17,9 @@ In the visual studio code debug pane, make sure the above launch config is selec
 
 # Deploy API
 
+```
 serverless deploy --stage dev --region ap-south-1
+```
 
 # Codebuild
 
